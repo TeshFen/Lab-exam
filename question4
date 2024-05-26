@@ -1,0 +1,15 @@
+public class Maxval {
+    public int findMax(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+
+        int maximum = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > maximum) {
+                maximum = array[i];
+            }
+        }
+
+        return maximum;
+    
