@@ -1,0 +1,21 @@
+import java.util.Stack;
+
+public class StringReverser {
+    public String reverseString(String inputString) {
+        if (inputString == null || inputString.isEmpty()) {
+            throw new IllegalArgumentException("Input string is null or empty");
+        }
+        
+        Stack<Character> charStack = new Stack<>();
+        for (char ch : inputString.toCharArray()) {
+            charStack.push(ch);
+        }
+        
+        StringBuilder reversedString = new StringBuilder();
+        while (!charStack.isEmpty()) {
+            reversedString.append(charStack.pop());
+        }
+        
+        return reversedString.toString();
+    }
+}
